@@ -1,17 +1,47 @@
-.likesCounter {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(65, 74, 76);
+  --light-color: rgb(238, 238, 238);
+  --secondary-color: rgb(0, 255, 187);
+}
+
+.App {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .likes {
-  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.likes h1 {
+  grid-column: 1/4;
   height: 300px;
   width: 300px;
   border-radius: 50%;
-  background-color: chocolate;
+  background-color: var(--primary-color);
+  color: var(--light-color);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+}
+
+.likes button {
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 1rem;
+  color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
 }
