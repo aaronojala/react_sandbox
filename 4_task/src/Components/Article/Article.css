@@ -1,0 +1,27 @@
+.Article {
+  background-color: #69013b;
+  color: #fce0d1;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.Article img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.Article button {
+  border: none;
+  padding: 10px 2rem;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+  background-color: #fce0d1;
+  border-radius: 2px;
+}
+
+.Article p {
+  margin: 1rem 0;
+}
