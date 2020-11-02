@@ -5,28 +5,17 @@ import './App.css';
 class App extends Component {
   state = {
     animals: [
-      {name: "Doggy", img: "https://source.unsplash.com/UtrE5DcgEyg"},
-      {name: "Monkey", img: "https://source.unsplash.com/4B5F388MLE4"},
-      {name: "Elephant", img: "https://source.unsplash.com/Twm64rH8wdc"},
+      {id: 1, name: "Doggy", img: "https://source.unsplash.com/UtrE5DcgEyg"},
+      {id: 2, name: "Monkey", img: "https://source.unsplash.com/4B5F388MLE4"},
+      {id: 3, name: "Elephant", img: "https://source.unsplash.com/Twm64rH8wdc"},
     ],
   };
+
   render(){
-    return (
-      <div className="cards">
-      <Animal 
-      name={this.state.animals[0].name}
-      img={this.state.animals[0].img}
-      />     
-      <Animal 
-      name={this.state.animals[1].name}
-      img={this.state.animals[1].img}
-      />     
-      <Animal 
-      name={this.state.animals[2].name}
-      img={this.state.animals[2].img}
-      />     
-      </div>
-    );
+     const animalsList = this.state.animals.map((animal) => {
+       return <Animal key={animal.id} name={animal.name} img={animal.img} />
+     });
+     return <div className="cards"> {animalsList} </div>;
   }
 }
 
