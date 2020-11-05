@@ -11,6 +11,7 @@ class App extends Component {
     score: 0,
     current: 0,
     showGameOver: false,
+    rounds: 0,
     circles: [
       { id: 1, color: "green" },
       { id: 2, color: "blue" },
@@ -32,10 +33,17 @@ class App extends Component {
 
     this.setState({
       score: this.state.score +1,
+      rounds: 0,
     });
   };
 
   nextCircle = () => {
+
+    if (this.state.rounds >= 5){
+      this.stopHandler();
+      return;
+    }
+
     let nextActive = undefined;
 
     do {
@@ -44,6 +52,7 @@ class App extends Component {
 
     this.setState ({
       current: nextActive,
+      rounds: this.state.rounds + 1,
     });
 
     this.pace *= 0.95;
