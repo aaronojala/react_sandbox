@@ -12,6 +12,7 @@
 
 .gameover_box {
   background: white;
+  color: black;
   padding: 1rem;
   width: 40%;
   min-height: 25%;

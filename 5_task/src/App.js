@@ -25,8 +25,10 @@ class App extends Component {
 
   clickHandler = (id) => {
     console.log('wow ' + id);
+    this.playAudio('beerOpen');
 
     if (this.state.current !== id) {
+      this.playAudio('gameOver');
       this.stopHandler();
       return;
     }
@@ -36,6 +38,11 @@ class App extends Component {
       rounds: 0,
     });
   };
+
+  playAudio = (sound) => {
+    var audio = new Audio(`/assets/${sound}.wav`);
+    audio.play();
+  }
 
   nextCircle = () => {
 

@@ -6,6 +6,7 @@ body {
   background-size: 1000% 1000%;
   animation: rainbow 75s ease infinite;
   text-align: center;
+  color: antiquewhite;
 }
 
 button {
