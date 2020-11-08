@@ -2,29 +2,31 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  background-color: #f4f4f4;
   display: inline-block;
   margin: 1rem;
-  box-shadow: 0 0 5px #333;
   cursor: pointer;
 }
 
-.green {
-  background-color: green;
+.beer1 {
+  background-image: url('./pics/beer1.svg');
+  opacity: 0.3;
 }
 
-.blue {
-  background-color: blue;
+.beer2 {
+  background-image: url('./pics/beer2.svg');
+  opacity: 0.3;
 }
 
-.red {
-  background-color: red;
+.beer3 {
+  background-image: url('./pics/beer3.svg');
+  opacity: 0.3;
 }
 
-.yellow {
-  background-color: yellow;
+.beer4 {
+  background-image: url('./pics/beer4.svg');
+  opacity: 0.3;
 }
 
 .circle.active {
-  background-color: white;
+  opacity: 1;
 }

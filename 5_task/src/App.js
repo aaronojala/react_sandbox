@@ -13,10 +13,10 @@ class App extends Component {
     showGameOver: false,
     rounds: 0,
     circles: [
-      { id: 1, color: "green" },
-      { id: 2, color: "blue" },
-      { id: 3, color: "red" },
-      { id: 4, color: "yellow" },
+      { id: 1, img: "beer1" },
+      { id: 2, img: "beer2" },
+      { id: 3, img: "beer3" },
+      { id: 4, img: "beer4" },
     ],
   };
 
@@ -75,7 +75,7 @@ class App extends Component {
 const circles = this.state.circles.map(item => {
   return <Circle 
   key={item.id}
-  color={item.color} 
+  img={item.img} 
   click={() => this.clickHandler(item.id)}
   active ={this.state.current === item.id} />;
 });
@@ -83,7 +83,7 @@ const circles = this.state.circles.map(item => {
     return (
       <div>
         <h1>Speedgame</h1>
-    <p>Your score is: {this.state.score}</p>
+    <p>How many beers can you drink? You drank {this.state.score} beers!</p>
         <div>
           {circles}
         </div>
