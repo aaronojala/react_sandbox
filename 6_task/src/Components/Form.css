@@ -10,7 +10,7 @@
 label {
   width: 10rem;
   display: inline-block;
-  padding: 1rem;
+  padding: 10px;
 }
 
 input {
@@ -34,6 +34,12 @@ textarea {
   border: none;
   width: 10rem;
   height: 3rem;
-  margin-top: 1rem;
+  margin-top: 10px;
   font-family: inherit;
+}
+
+.send {
+  background-color: crimson;
+  color: white;
+  margin-left: 10rem;
 }

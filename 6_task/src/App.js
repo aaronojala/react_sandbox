@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from './Components/Form'
 import View from './Components/View'
+import Popup from './Components/Popup'
 
 class App extends Component {
   state = {
@@ -8,7 +9,8 @@ class App extends Component {
     lastname: "",
     phonenumber: "",
     role: "",
-    message: ""
+    message: "",
+    showPopUp: false,
   };
 
   changeHandler = (event) => {
@@ -18,11 +20,19 @@ class App extends Component {
     });
   }
 
+  submitHandler = (event) => {
+    console.log('submitWorks')
+    this.setState({
+      showPopUp: true,
+    });
+    event.preventDefault();
+  }
+
 
   render() {
     return (
       <div>
-        <Form onChange={this.changeHandler}/>
+        <Form onChange={this.changeHandler} submit={this.submitHandler}/>
         <View
         firstname={this.state.firstname} 
         lastname={this.state.lastname}
@@ -30,6 +40,14 @@ class App extends Component {
         role={this.state.role}
         message={this.state.message}
         />
+        {this.state.showPopUp && ( <Popup 
+        firstname = {this.state.firstname}
+        lastname = {this.state.lastname}
+        phonenumber = {this.state.phonenumber}
+        role = {this.state.role}
+        message = {this.state.message}
+        />
+        )}
       </div>
     );
   }

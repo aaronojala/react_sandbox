@@ -1,0 +1,20 @@
+.popup {
+  background: white;
+  color: black;
+  padding: 1rem;
+  width: 40%;
+  min-height: 25%;
+  border-radius: 5px;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.popup button {
+  background: lightgray;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
