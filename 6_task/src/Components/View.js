@@ -1,14 +1,17 @@
 import React from 'react';
+import './View.css'
 
 const View = (props) => {
     return (
-        <div>
+        <div className="view">
+            <div className="notepad">
             <h2>This is your input</h2>
-            <p>First Name: {props.firstname}</p>
-            <p>Last Name: {props.lastname}</p>
-            <p>Phone Number: {props.phonenumber}</p>
-            <p>Role: {props.role}</p>
-            <p>Message: {props.message}</p>
+            <p>First Name: <span>{props.firstname}</span></p>
+            <p>Last Name: <span>{props.lastname}</span></p>
+            <p>Phone Number: <span>{props.phonenumber}</span></p>
+            <p>Role: <span>{props.role}</span></p>
+            <p>Message: <span>{props.message}</span></p>
+            </div>
         </div>
     );
 };
