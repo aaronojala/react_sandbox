@@ -1,3 +1,15 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
 .popup {
   background: white;
   color: black;
@@ -12,9 +24,12 @@
 }
 
 .popup button {
-  background: lightgray;
+  padding: 10px;
+  background: black;
+  color: white;
   position: absolute;
   top: 5px;
   right: 5px;
   cursor: pointer;
+  font-family: inherit;
 }

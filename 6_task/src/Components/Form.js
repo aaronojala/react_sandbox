@@ -20,9 +20,9 @@ const Form = (props) => {
                 <div>
                 <label htmlFor="role">Role</label>
                 <select name="role" onChange={props.onChange}>
-                <option value="lit" name="role">Lit</option>
-                <option value="skrt" name="role">Skrt</option>
-                <option value="ftsh" name="role">Ftsh</option>
+                <option value="teacher" name="role">Teacher</option>
+                <option value="student" name="role">Student</option>
+                <option value="other" name="role">Other</option>
                 </select>
                 </div>
                 <div>

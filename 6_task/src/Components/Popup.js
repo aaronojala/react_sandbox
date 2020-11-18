@@ -8,13 +8,15 @@ const closeHandler = () => {
 
 const Popup = (props) => {
     return (
-        <div className="popup">
-            <p>First name: {props.firstname}</p>
-            <p>Last name: {props.lastname}</p>
-            <p>Phone number: {props.phonenumber}</p>
-            <p>Role: {props.role}</p>
-            <p>Message: {props.message}</p>
-        <button onClick={closeHandler}>Close</button>
+        <div className="overlay">
+            <div className="popup">
+                <p>First name: <span>{props.firstname}</span></p>
+                <p>Last name: <span>{props.lastname}</span></p>
+                <p>Phone number: <span>{props.phonenumber}</span></p>
+                <p>Role: <span>{props.role}</span></p>
+                <p>Message: <span>{props.message}</span></p>
+                <button onClick={closeHandler}>Close</button>
+                </div>
         </div>
     );
 };
