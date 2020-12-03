@@ -3,9 +3,11 @@ import Form from './Components/Form'
 import View from './Components/View'
 import Popup from './Components/Popup'
 import NotesList from './Components/NotesList/NotesList'
+import axios from 'axios';
 
 const App = () => {
 const [note, setNote] = useState({
+    id: "",
     firstname: "",
     lastname: "",
     phonenumber: "",
@@ -21,15 +23,19 @@ const changeHandler = (event) => {
   });
 };
 
-const submitHandler = (event) => {
+const popupHandler = (event) => {
   setShowPopup(true);
   event.preventDefault();
-}
+};
 
+const submitHandler = () => {
+  axios.post('http://localhost:3001/notes', note);
+  window.location.reload();
+};
 
   return (
     <div>
-        <Form onChange={changeHandler} submit={submitHandler}/>
+        <Form onChange={changeHandler} submit={popupHandler}/>
         <View
         firstname={note.firstname} 
         lastname={note.lastname}
@@ -44,6 +50,7 @@ const submitHandler = (event) => {
         phonenumber = {note.phonenumber}
         role = {note.role}
         message = {note.message}
+        submit = {submitHandler}
         />
         )}
       </div>

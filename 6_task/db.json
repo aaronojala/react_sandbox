@@ -1,28 +1,60 @@
 {
-    "notes": [
-        {
-            "id":1,
-            "firstname":"Aaron",
-            "lastname":"Ojala",
-            "phonenumber": "1234567",
-            "role": "Student",
-            "message": "This is my amazing message"
-        },
-        {
-            "id":2,
-            "firstname":"Suvi",
-            "lastname":"Ryytty",
-            "phonenumber": "76544321",
-            "role": "Teacher",
-            "message": "Hello I am a teacher"
-        },
-        {
-            "id":3,
-            "firstname":"Seppo",
-            "lastname":"Ojala",
-            "phonenumber": "3333333",
-            "role": "Other",
-            "message": "This is another message"
-        }
-    ]
+  "notes": [
+    {
+      "id": 1,
+      "firstname": "Aaron",
+      "lastname": "Ojala",
+      "phonenumber": "1234567",
+      "role": "Student",
+      "message": "This is my amazing message"
+    },
+    {
+      "id": 2,
+      "firstname": "Suvi",
+      "lastname": "Ryytty",
+      "phonenumber": "76544321",
+      "role": "Teacher",
+      "message": "Hello I am a teacher"
+    },
+    {
+      "id": 3,
+      "firstname": "Seppo",
+      "lastname": "Ojala",
+      "phonenumber": "3333333",
+      "role": "Other",
+      "message": "This is another message"
+    },
+    {
+      "firstname": "Pauli",
+      "lastname": "Ojala",
+      "phonenumber": "12344566",
+      "role": "student",
+      "message": "TEst test test",
+      "id": 4
+    },
+    {
+      "firstname": "Harry",
+      "lastname": "Potter",
+      "phonenumber": "124",
+      "role": "teacher",
+      "message": "This is my message",
+      "id": 5
+    },
+    {
+      "firstname": "Olli",
+      "lastname": "Alli",
+      "phonenumber": "235235",
+      "role": "student",
+      "message": "asdfsdafasdf",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "firstname": "Alex",
+      "lastname": "Alex",
+      "phonenumber": "23942",
+      "role": "student",
+      "message": "ADFDFSDFASF"
+    }
+  ]
 }

@@ -15,7 +15,8 @@ const Popup = (props) => {
                 <p>Phone number: <span>{props.phonenumber}</span></p>
                 <p>Role: <span>{props.role}</span></p>
                 <p>Message: <span>{props.message}</span></p>
-                <button onClick={closeHandler}>Close</button>
+                <button onClick={props.submit}>Yes, I am sure</button>
+                <button onClick={closeHandler}>Nope, don't want to post it</button>
                 </div>
         </div>
     );

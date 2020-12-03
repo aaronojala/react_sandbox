@@ -5,8 +5,8 @@ const NotesList = () => {
 const [posts, setPosts] = useState([]);
 
 useEffect(() =>
-    axios.get('http://localhost:3001/notes').then((res) => setPosts(res.data))
-);
+    axios.get('http://localhost:3001/notes').then((res) => setPosts(res.data)),
+    []);
 
 return (
     <div>
