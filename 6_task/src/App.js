@@ -1,56 +1,53 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Form from './Components/Form'
 import View from './Components/View'
 import Popup from './Components/Popup'
+import NotesList from './Components/NotesList/NotesList'
 
-class App extends Component {
-  state = {
+const App = () => {
+const [note, setNote] = useState({
     firstname: "",
     lastname: "",
     phonenumber: "",
     role: "",
-    message: "",
-    showPopUp: false,
-  };
+    message: "",    
+})
+const [showPopup, setShowPopup] = useState(false);
 
-  changeHandler = (event) => {
-    console.log('isitworking?')
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
-  }
+const changeHandler = (event) => {
+  setNote({
+    ...note,
+    [event.target.name]: event.target.value,
+  });
+};
 
-  submitHandler = (event) => {
-    console.log('submitWorks')
-    this.setState({
-      showPopUp: true,
-    });
-    event.preventDefault();
-  }
+const submitHandler = (event) => {
+  setShowPopup(true);
+  event.preventDefault();
+}
 
 
-  render() {
-    return (
-      <div>
-        <Form onChange={this.changeHandler} submit={this.submitHandler}/>
+  return (
+    <div>
+        <Form onChange={changeHandler} submit={submitHandler}/>
         <View
-        firstname={this.state.firstname} 
-        lastname={this.state.lastname}
-        phonenumber={this.state.phonenumber}
-        role={this.state.role}
-        message={this.state.message}
+        firstname={note.firstname} 
+        lastname={note.lastname}
+        phonenumber={note.phonenumber}
+        role={note.role}
+        message={note.message}
         />
-        {this.state.showPopUp && ( <Popup 
-        firstname = {this.state.firstname}
-        lastname = {this.state.lastname}
-        phonenumber = {this.state.phonenumber}
-        role = {this.state.role}
-        message = {this.state.message}
+        <NotesList />
+        {showPopup && ( <Popup 
+        firstname = {note.firstname}
+        lastname = {note.lastname}
+        phonenumber = {note.phonenumber}
+        role = {note.role}
+        message = {note.message}
         />
         )}
       </div>
-    );
-  }
-}
+  );
+};
 
 export default App;
