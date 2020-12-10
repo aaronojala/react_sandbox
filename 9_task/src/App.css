@@ -5,6 +5,42 @@
 }
 
 header {
+  background-color: rgb(206, 206, 206);
+  padding: 1rem;
+}
+
+li.nav-item {
+  padding: 1rem;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: white;
+  margin: 0.5rem;
+}
+
+li.nav-item a {
+  color: #333;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.card-columns {
+  text-align: center;
+  margin: 1rem;
+}
+/* .blogCard {
+  display: inline-grid;
+  align-items: flex-start;
+  grid-template-rows: repeat(1, 1fr);
+} */
+
+/* header {
   background-color: #1d1d1d;
   color: white;
   padding: 2rem;
@@ -19,7 +55,7 @@ nav ul li {
   padding: 1rem;
 }
 
-a {
+nav a {
   color: white;
 }
 
@@ -65,4 +101,4 @@ a {
   color: #333;
   text-decoration: none;
   display: block;
-}
+} */
