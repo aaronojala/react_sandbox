@@ -25,7 +25,7 @@ const BlogCard = ({ title, author, desc, img, link }) => {
           {desc}
           </Card.Text>
           <Card.Img src={img} alt={title} />
-          <Link to={link}>Read more</Link>
+          <Link className="link" to={link}>Read more</Link>
         </Card.Body>
       </Card>
       </div>

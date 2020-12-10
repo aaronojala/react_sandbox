@@ -1,20 +1,23 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 
-const Navbar = () => {
+const Navigation = () => {
     return (
-        <Nav className="justify-content-center" defaultActiveKey="/" as="ul">
-            <Nav.Item as="li">
-                <Link to="/">Home</Link>
+    <Navbar className="justify-content-center" bg="dark" variant="dark">
+        <Nav>
+            <Nav.Item>
+            <Nav.Link><Link className="link" to="/">Home</Link></Nav.Link>
             </Nav.Item>
-            <Nav.Item as="li">
-                <Link to="/blog">Blog</Link>
+            <Nav.Item>
+            <Nav.Link><Link className="link" to="/blog">Blog</Link></Nav.Link>
             </Nav.Item>
-            <Nav.Item as="li">
-                <Link to="/new_post">New Post</Link>
+            <Nav.Item>
+            <Nav.Link><Link className="link" to="/new_post">New Post</Link></Nav.Link>
             </Nav.Item>
         </Nav>
+    </Navbar>
         // <nav>
         //     <ul>
         //         <li>
@@ -31,4 +34,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Navigation;
