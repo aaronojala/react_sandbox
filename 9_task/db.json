@@ -34,6 +34,13 @@
       "desc": "Hello Hello",
       "img": "https://source.unsplash.com/1600x900/?city",
       "id": 5
+    },
+    {
+      "title": "Post6",
+      "author": "Pekka",
+      "desc": "This is my amazing description",
+      "img": "https://source.unsplash.com/1600x900/?city",
+      "id": 6
     }
   ]
 }

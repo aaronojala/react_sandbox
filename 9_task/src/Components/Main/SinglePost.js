@@ -1,20 +1,23 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
+import Alert from 'react-bootstrap/Alert'
 
 const SinglePost = () => {
     const [post, setPost] = useState();
+    const [error, setError] = useState(null);
     let {id} = useParams();
 
     useEffect(()=> {
         if (!post) {
             axios
                 .get('http://localhost:3001/posts/' + id)
-                .then((res) => setPost(res.data));
+                .then((res) => setPost(res.data))
+                .catch(err => setError(err.message))
         }
     });
 
-    let postData = undefined;
+    /* let postData = undefined;
 
     if (id) {
         postData = <h1>Loading...</h1>;
@@ -26,8 +29,19 @@ const SinglePost = () => {
         );
     }
 
+    
+    return postData; */
 
-    return postData;
+    return ( 
+        error? 
+        <div>
+        <Alert variant="danger">
+        <Alert.Heading>Blog post not found!</Alert.Heading>
+        </Alert>
+        </div>:
+        !post? <h1>Loading...</h1>:
+        <div>{post.desc}</div>
+    )
 };
 
 export default SinglePost;

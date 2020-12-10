@@ -16,6 +16,7 @@ const Blog = () => {
 
   const PostList = posts.map((p) => {
     return (
+    
       <BlogCard
         key={p.id}
         title={p.title}
@@ -23,9 +24,10 @@ const Blog = () => {
         img={p.img}
         link={`${url}/${p.id}`}
       />
+    
     );
   });
-
+  
   return <><Switch>
     <Route path={`${path}/:id`}>
       <SinglePost />

@@ -9,11 +9,12 @@ const BlogCard = ({ title, author, desc, img, link }) => {
     [
       'Dark',
     ].map((variant, idx) => (
+      <div className="blogCard">
       <Card
         bg={variant.toLowerCase()}
         key={idx}
         text={variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-        style={{ width: '20rem' }}
+        style={{ width: '18rem' }}
         className="mb-2"
         border="light"
       >
@@ -27,6 +28,7 @@ const BlogCard = ({ title, author, desc, img, link }) => {
           <Link to={link}>Read more</Link>
         </Card.Body>
       </Card>
+      </div>
     ))
   )
 };
