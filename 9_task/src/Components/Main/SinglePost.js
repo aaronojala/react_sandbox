@@ -40,7 +40,7 @@ const SinglePost = () => {
         </Alert>
         </div>:
         !post? <h1>Loading...</h1>:
-        <div>{post.desc}</div>
+        <div className="desc"><p>{post.desc}</p></div>
     )
 };
 
